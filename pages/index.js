@@ -1,8 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-
+import { useState } from "react";
 export default function Home() {
+  const [a, setA] = useState(["hey there"]);
+  const handleClick = () => {
+    let b = [...a];
+    b.push("her there");
+    setA(b);
+    throw new Error("ooops");
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -12,7 +19,12 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div>hey there</div>
+        {a.map((c, index) => {
+          return <div key={index}>{c}</div>;
+        })}
+        <div>
+          <button onClick={handleClick}>Click me</button>
+        </div>
       </main>
     </div>
   );
