@@ -8,7 +8,7 @@ export default function Home() {
     let b = [...a];
     b.push("hey there");
     setA(b);
-    throw new Error("a new error");
+    throw new Error("an even newer error");
   };
   return (
     <div className={styles.container}>
