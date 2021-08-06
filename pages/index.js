@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div>{process.env.yo}</div>
+        <div>{process.env.sentry}</div>
         {a.map((c, index) => {
           return <div key={index}>{c}</div>;
         })}

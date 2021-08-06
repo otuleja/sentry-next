@@ -8,7 +8,7 @@ const { withSentryConfig } = require("@sentry/nextjs");
 const moduleExports = {
   // Your existing module.exports
   env: {
-    yo: process.env.YO ? process.env.YO : "default",
+    sentry: process.env.SENTRY ? process.env.SENTRY : "default",
   },
 };
 
