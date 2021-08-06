@@ -6,9 +6,9 @@ export default function Home() {
   const [a, setA] = useState(["hey there sentry"]);
   const handleClick = () => {
     let b = [...a];
-    b.push("her there");
+    b.push("hey there");
     setA(b);
-    throw new Error("ooops");
+    throw new Error("a new error");
   };
   return (
     <div className={styles.container}>
