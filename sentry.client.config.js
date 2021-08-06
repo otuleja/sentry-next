@@ -5,7 +5,7 @@
 import * as Sentry from "@sentry/nextjs";
 
 const SENTRY_DSN = process.env.sentry;
-
+console.log("client", SENTRY_DSN);
 Sentry.init({
   dsn: SENTRY_DSN,
   // Adjust this value in production, or use tracesSampler for greater control
