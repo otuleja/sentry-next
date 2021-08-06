@@ -8,7 +8,7 @@ export default function Home() {
     let b = [...a];
     b.push("hey there");
     setA(b);
-    throw new Error("will this show up");
+    throw new Error("a new react error");
   };
   return (
     <div className={styles.container}>
